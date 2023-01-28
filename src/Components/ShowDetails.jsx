@@ -63,7 +63,17 @@ function ShowDetails() {
     },
   ];
 
-  return <Table dataSource={details} columns={columns} pagination={false} />;
+  return (
+    <div style={{ maxWidth: "1080px", margin: "5% auto" }}>
+      <h1>Details</h1>
+      <Table
+        dataSource={details}
+        columns={columns}
+        pagination={false}
+        className="tableData"
+      />
+    </div>
+  );
 }
 
 export default ShowDetails;
